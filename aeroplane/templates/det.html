@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <h1>
+                    <td>Name</td>
+                    <td>Source</td>
+                    <td>Destination</td>
+                    <td>Date</td>
+                    <td>Price</td>
+                </h1>
+            </tr>
+        </thead>
+        {% for data in d %}
+        <tr>
+            <td>  {{ data.Name }} </td>
+            <td>  {{ data.Source }} </td>
+            <td>  {{ data.Destiny }} </td>
+            <td>  {{ data.Date }} </td>
+            <td>  {{ data.price }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form method="POST"> {% csrf_token %}
+        <label for="id1">Name</label>
+        <input type="text" name="name" id="id1" placeholder="enter name" required><br>
+        <label for="id2">Source</label>
+        <input type="text" name="fplace" id="id2" placeholder="enter source" required><br>
+        <label for="id3">Destination</label>
+        <input type="text" name="dplace" id="id3" placeholder="enter DestinTION" required><br>
+        <label for="id4">Date</label
+        <input type="date" name="datee" id="id4" placeholder="enter date" required><br>
+        <label for="id5">Price</label>
+        <input type="number" name="Price" id="id5" placeholder="enter price" required><br>
+        <button  type="submit">Add</button>
+    </form>
+</body>
+</html>

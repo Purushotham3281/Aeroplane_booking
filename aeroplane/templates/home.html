@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <h1>
+                    <td>Name</td>
+                    <td>Source</td>
+                    <td>Destination</td>
+                    <td>Date</td>
+                    <td>Price</td>
+                </h1>
+            </tr>
+        </thead>
+        {% for i in res %}
+        <tr>
+            <td>  {{ i.name }} </td>
+            <td>  {{ i.source }} </td>
+            <td>  {{ i.destiny }} </td>
+            <td>  {{ i.date }} </td>
+            <td>  {{ i.Price }} </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
